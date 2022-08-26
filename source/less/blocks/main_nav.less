@@ -16,7 +16,7 @@
   padding: 71px 25px 25px 15px;
   margin: 0;
   margin-left: 35px;
-    min-height: 568px;
+  min-height: 568px;
   width: 100%;
   box-sizing: border-box;
 
@@ -101,14 +101,12 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
 }
 
 .main-nav__toggle--js {
-  display: block;
+  @media (max-width: 765px) {
+    display: block;
+  }
 }
 
 .main-nav__toggle--closed-js::before {
@@ -162,18 +160,20 @@
   }
 
   &--mod {
-    left: 40px;
+    @media (max-width: 765px) {
+      left: 40px;
 
-    & > .main-nav__logo-link-svg {
-      fill: #000000;
-    }
+      & > .main-nav__logo-link-svg {
+        fill: #000000;
+      }
 
-    &:hover > .main-nav__logo-link-svg {
-      fill: #333333;
-    }
+      &:hover > .main-nav__logo-link-svg {
+        fill: #333333;
+      }
 
-    &:active > .main-nav__logo-link-svg {
-      fill: #000000;
+      &:active > .main-nav__logo-link-svg {
+        fill: #000000;
+      }
     }
   }
 

@@ -1,21 +1,20 @@
-const navList = document.querySelector(".main-nav__list")
-const navToggle = document.querySelector(".main-nav__toggle")
-const navLogo = document.querySelector(".main-nav__logo-link")
+const NAVLIST = document.querySelector(".main-nav__list")
+const NAVTOGGLE = document.querySelector(".main-nav__toggle")
+const NAVLOGO = document.querySelector(".main-nav__logo-link")
+const MAP = document.querySelector(".contacts__map-frame1")
+const PAGEHEADER = document.querySelector(".page_header")
 
-const pageHeader = document.querySelector(".page_header")
+NAVLOGO.classList.remove("main-nav__logo-link--mod")
+PAGEHEADER.classList.add("page_header--js")
+NAVTOGGLE.classList.add("main-nav__toggle--js")
+NAVTOGGLE.classList.add("main-nav__toggle--closed-js")
+NAVTOGGLE.classList.remove("main-nav__toggle--open-js")
+NAVLIST.classList.add("main-nav__list--closed-js")
+MAP.classList.add("contacts__map-frame--js")
 
-navLogo.classList.remove("main-nav__logo-link--mod")
-pageHeader.classList.add("page_header--js")
-
-navToggle.classList.add("main-nav__toggle--js")
-navToggle.classList.add("main-nav__toggle--closed-js")
-navToggle.classList.remove("main-nav__toggle--open-js")
-
-navList.classList.add("main-nav__list--closed-js")
-
-navToggle.addEventListener("click", function () {
-    navToggle.classList.toggle("main-nav__toggle--closed-js")
-    navToggle.classList.toggle("main-nav__toggle--open-js")
-    navList.classList.toggle("main-nav__list--closed-js")
-    navLogo.classList.toggle("main-nav__logo-link--mod")
+NAVTOGGLE.addEventListener("click", () => {
+  NAVTOGGLE.classList.toggle("main-nav__toggle--closed-js")
+  NAVTOGGLE.classList.toggle("main-nav__toggle--open-js")
+  NAVLIST.classList.toggle("main-nav__list--closed-js")
+  NAVLOGO.classList.toggle("main-nav__logo-link--mod")
 })

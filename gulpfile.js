@@ -27,15 +27,12 @@ const styles = () => {
 
 // HTML
 const html = () => {
-  return gulp
-    .src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"))
+  return gulp.src("source/*.html").pipe(gulp.dest("build"))
 }
 
 //scripts
 const scripts = () => {
-  return gulp.src("source/js/*.js").pipe(terser()).pipe(gulp.dest("build/js"))
+  return gulp.src("source/js/*.js").pipe(gulp.dest("build/js"))
 }
 
 //images
