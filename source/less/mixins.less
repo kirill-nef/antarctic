@@ -1,0 +1,63 @@
+// Размеры окон мобилки
+@mobile-width: 320px;
+@mobile-max-width: 500px;
+@mobile-width-only: 767px;
+
+// Размеры окон планшета
+@tablet-width: 768px;
+@tablet-max-width: 900px;
+@tablet-width-only: 1149px;
+
+// Размеры окон десктопа
+@desktop-width: 1366px;
+@desktop-max-width: 1550px;
+
+.config-size-and-position() {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: @mobile-max-width;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-max-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-max-width;
+  }
+}
+
+.padding() {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+    @media (min-width: @desktop-width) {
+    padding-left: 103px;
+    padding-right: 103px;
+  }
+}
+
+.style-common() {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  .style-common();
+
+}
+
+ul {
+  .style-common();
+  list-style-type: none;
+}
+
+p, h1, h2, h3, h4 {
+  .style-common();
+}

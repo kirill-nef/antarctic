@@ -1,0 +1,130 @@
+.contacts {
+  padding-top: 42px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 53px;
+    padding-bottom: 43px;
+  }
+}
+
+.contacts__text-title {
+  margin-bottom: 28px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.contacts__block {
+  @media (min-width: @tablet-width) {
+    // width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+
+  &--text {
+    margin-bottom: 37px;
+
+    @media (min-width: @tablet-width) {
+      box-sizing: border-box;
+      padding-left: 30px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 100px;
+    }
+  }
+
+  &--map {
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      // width: 48%;
+      order: -1;
+    }
+  }
+}
+
+.contacts__map-frame {
+  min-height: 316px;
+  min-width: 290px;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  background-image: url("../img/background-img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    // background-image: url("../img/background-img/map-tablet.jpg");
+    min-height: 335px;
+    min-width: 324px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // background-image: url("../img/background-img/map-desktop.jpg");
+
+    min-height: 316px;
+    min-width: 560px;
+  }
+}
+
+// .contacts__map-frame--js {
+//   background-image: unset;
+// }
+
+.contacts__icon {
+  position: relative;
+
+  padding-left: 28px;
+  margin-bottom: 20px;
+
+  line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    z-index: 1;
+    content: "";
+    width: 22px;
+    height: 22px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--location::before {
+    background-image: url("../img/icon-svg/location.svg");
+  }
+
+  &--phone::before {
+    background-image: url("../img/icon-svg/phone.svg");
+  }
+}
+
+.contacts__icon br {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

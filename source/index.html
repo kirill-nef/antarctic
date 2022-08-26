@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Атлантис: главная страница</title>
+    <!-- Предзагрузки -->
+    <link rel="preload" href="js/burger-menu.js" as="script" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <!-- Иконки -->
+    <link rel="icon" href="favicon.ico" />
+    <!-- Шрифты -->
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <!-- Хэдер -->
+    <header class="page_header">
+      <nav class="main-nav">
+        <!-- Лого навигации -->
+        <a href="#" class="main-nav__logo-link main-nav__logo-link--mod" title="Вы сейчас находитесь на главной странице" aria-current="page">
+          <span class="visually-hidden">Главная страница</span>
+          <svg class="main-nav__logo-link-svg" width="42" height="22">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <!-- Список в навигации -->
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="#">Преимущества</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="#">Направления</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="#">Ближайшие круизы</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a class="main-nav__list-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Кнопка бургер меню (М)-->
+      <button class="main-nav__toggle main-nav__toggle--open-js" type="button">
+        <span class="visually-hidden">Открыть/Закрыть меню</span>
+      </button>
+    </header>
+
+    <!-- Блок основного контента  -->
+    <main class="page-main">
+      <!-- Секция заголовка страницы -->
+      <div class="intro page-main__intro">
+        <div class="intro__box">
+          <h1 class="intro__title">
+            Круизы
+            <span><br /></span>
+            в Антарктику
+          </h1>
+          <span class="intro__subtitle">
+            Волшебный мир
+            <span><br /></span>
+            айсбергов и пингвинов
+          </span>
+        </div>
+      </div>
+
+      <!-- Блок с прочей информации, типо реклама -->
+      <aside class="other page-main__others container">
+        <div class="other__box other__box--text">
+          <h2 class="other__title">
+            Путешествие
+            <span><br /></span>
+            на край Земли
+          </h2>
+          <span class="other__subtitle">
+            Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный
+            лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов,
+            китов, морских котиков и многое другое.
+          </span>
+        </div>
+        <div class="other__box other__box--img">
+          <picture>
+            <!-- webp -->
+            <source
+              type="image/webp"
+              media="(min-width: 1366px)"
+              srcset="img/other-img-webp/pingvin_desktop.webp 1x, img/other-img-webp/pingvin_desktop@2x.webp 2x"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/other-img-webp/pingvin_tablet.webp 1x, img/other-img-webp/pingvin_tablet@2x.webp 2x"
+            />
+            <source
+              type="image/webp"
+              srcset="img/other-img-webp/pingvin_mobile.webp 1x, img/other-img-webp/pingvin_mobile@2x.webp 2x"
+            />
+
+            <!-- jpg -->
+            <source
+              media="(min-width: 1366px)"
+              srcset="img/other-img-webp/pingvin_desktop.jpg 1x, img/other-img/pingvin_desktop@2x.jpg 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/other-img-webp/pingvin_tablet.jpg 1x, img/other-img/pingvin_tablet@2x.jpg 2x"
+            />
+            <img
+              class="other__images"
+              src="img/other-img-webp/pingvin_mobile.jpg"
+              srcset="img/other-img-webp/pingvin_mobile@2x.jpg 2x"
+              alt="Изображение пингвина"
+              width="290"
+              height="186"
+            />
+          </picture>
+        </div>
+      </aside>
+
+      <!-- Блок преимуществ -->
+      <section class="advantages page-main__advantages">
+        <div class="container">
+          <h2 class="advantages__title-head">Преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item advantages__item--ship">
+              <h3 class="advantages__title">
+                Небольшой
+                <span><br /></span>
+                круизный лайнер
+              </h3>
+              <span class="advantages__subtitle">
+                Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст
+                возможность насладиться видами и природой.
+              </span>
+            </li>
+            <li class="advantages__item advantages__item--mark">
+              <h3 class="advantages__title">
+                Система
+                <span><br /></span>
+                все включено
+              </h3>
+              <span class="advantages__subtitle">
+                Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для
+                вас 24 часа.
+              </span>
+            </li>
+            <li class="advantages__item advantages__item--boad">
+              <h3 class="advantages__title">
+                Экскурсионные
+                <span><br /></span>
+                туры на Zodiac
+              </h3>
+              <span class="advantages__subtitle">
+                Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении
+                опытных экскурсоводов.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Блок ближайшие круизы -->
+      <section class="cruise page-main__cruise container">
+        <h2 class="cruise__title">Ближайшие круизы</h2>
+        <ul class="cruise__list">
+          <!-- Круиз “Астория” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/astoriya_desktop.webp 1x, img/cruise-img-webp/astoriya_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/astoriya_tablet.webp 1x, img/cruise-img-webp/astoriya_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/astoriya_mobile.webp 1x, img/cruise-img-webp/astoriya_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/astoriya_desktop.jpg 1x, img/cruise-img-webp/astoriya_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/astoriya_tablet.jpg 1x, img/cruise-img-webp/astoriya_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/astoriya_mobile.jpg"
+                  srcset="img/cruise-img-webp/astoriya_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Астория”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Астория”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Элайн” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/elayn_desktop.webp 1x, img/cruise-img-webp/elayn_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/elayn_tablet.webp 1x, img/cruise-img-webp/elayn_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/elayn_mobile.webp 1x, img/cruise-img-webp/elayn_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/elayn_desktop.jpg 1x, img/cruise-img-webp/elayn_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/elayn_tablet.jpg 1x, img/cruise-img-webp/elayn_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/elayn_mobile.jpg"
+                  srcset="img/cruise-img-webp/elayn_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Элайн”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Элайн”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Атлантис” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/atlantis_desktop.webp 1x, img/cruise-img-webp/atlantis_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/atlantis_tablet.webp 1x, img/cruise-img-webp/atlantis_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/atlantis_mobile.webp 1x, img/cruise-img-webp/atlantis_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/atlantis_desktop.jpg 1x, img/cruise-img-webp/atlantis_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/atlantis_tablet.jpg 1x, img/cruise-img-webp/atlantis_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/atlantis_mobile.jpg"
+                  srcset="img/cruise-img-webp/atlantis_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Атлантис”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Атлантис”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Одиссей” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/odissey_desktop.webp 1x, img/cruise-img-webp/odissey_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/odissey_tablet.webp 1x, img/cruise-img-webp/odissey_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/odissey_mobile.webp 1x, img/cruise-img-webp/odissey_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/odissey_desktop.jpg 1x, img/cruise-img-webp/odissey_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/odissey_tablet.jpg 1x, img/cruise-img-webp/odissey_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/odissey_mobile.jpg"
+                  srcset="img/cruise-img-webp/odissey_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Одиссей”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Одиссей”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Олимпия” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/olimpia_desktop.webp 1x, img/cruise-img-webp/olimpia_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/olimpia_tablet.webp 1x, img/cruise-img-webp/olimpia_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/olimpia_mobile.webp 1x, img/cruise-img-webp/olimpia_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/olimpia_desktop.jpg 1x, img/cruise-img-webp/olimpia_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/olimpia_tablet.jpg 1x, img/cruise-img-webp/olimpia_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/olimpia_mobile.jpg"
+                  srcset="img/cruise-img-webp/olimpia_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Олимпия”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Олимпия”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Аврора” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/avrora_desktop.webp 1x, img/cruise-img-webp/avrora_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/avrora_tablet.webp 1x, img/cruise-img-webp/avrora_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/avrora_mobile.webp 1x, img/cruise-img-webp/avrora_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/avrora_desktop.jpg 1x, img/cruise-img-webp/avrora_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/avrora_tablet.jpg 1x, img/cruise-img-webp/avrora_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/avrora_mobile.jpg"
+                  srcset="img/cruise-img-webp/avrora_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Аврора”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Аврора”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Ленор” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/lenor_desktop.webp 1x, img/cruise-img-webp/lenor_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/lenor_tablet.webp 1x, img/cruise-img-webp/lenor_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/lenor_mobile.webp 1x, img/cruise-img-webp/lenor_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/lenor_desktop.jpg 1x, img/cruise-img-webp/lenor_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/lenor_tablet.jpg 1x, img/cruise-img-webp/lenor_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/lenor_mobile.jpg"
+                  srcset="img/cruise-img-webp/lenor_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Ленор”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Ленор”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+
+          <!-- Круиз “Минион - 1” -->
+          <li class="cruise__item">
+            <div class="cruise__block-img">
+              <picture>
+                <!-- webp -->
+                <source
+                  type="image/webp"
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/minion_desktop.webp 1x, img/cruise-img-webp/minion_desktop@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/minion_tablet.webp 1x, img/cruise-img-webp/minion_tablet@2x.webp 2x"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cruise-img-webp/minion_mobile.webp 1x, img/cruise-img-webp/minion_mobile@2x.webp 2x"
+                />
+                <!-- jpg -->
+                <source
+                  media="(min-width: 1366px)"
+                  srcset="img/cruise-img-webp/minion_desktop.jpg 1x, img/cruise-img-webp/minion_desktop@2x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/cruise-img-webp/minion_tablet.jpg 1x, img/cruise-img-webp/minion_tablet@2x.jpg 2x"
+                />
+                <img
+                  class="cruise__img"
+                  src="img/cruise-img-webp/minion_mobile.jpg"
+                  srcset="img/cruise-img-webp/minion_mobile@2x.jpg 2x"
+                  alt="Круиз “Элайн”"
+                  width="270"
+                  height="386"
+                />
+              </picture>
+              <h4 class="cruise__title-item">Круиз “Минион - 1”</h4>
+            </div>
+            <div class="cruise__card">
+              <span class="cruise__title-list">Круиз “Минион - 1”</span>
+              <p class="cruise__text-first">Маршрут</p>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <p class="cruise__text-first">Порт отправления</p>
+              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <p class="cruise__text-first">Продолжительность</p>
+              <span class="cruise__text-second">20 дней</span>
+              <p class="cruise__text-first">Цена</p>
+              <span class="cruise__text-second">от 14500 $</span>
+              <button class="cruise__button button">Забронировать</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="booking page-main__booking">
+        <div class="booking__box container">
+          <div class="booking__box-text">
+            <h2 class="booking__title">Раннее бронирование</h2>
+            <p class="booking__subtitle">
+              Забронируйте тур
+              <span><br /></span>
+              за 3-6 месяцев до даты выезда
+              <span><br /></span>
+              и сэкономьте до 50%
+            </p>
+          </div>
+
+          <form action="https://echo.htmlacademy.ru/" method="get">
+            <div class="booking__box-form">
+              <fieldset class="booking__field">
+                <h2 class="booking__field-title">
+                  Оставьте заявку
+                  <span><br /></span>
+                  и мы свяжемся с вами
+                  <span><br /></span>
+                  в ближайшее время
+                </h2>
+                <div class="booking__box-input">
+                  <input
+                    class="booking__field-input"
+                    type="text"
+                    id="field-name"
+                    name="field-name"
+                    placeholder="Имя"
+                    required
+                  />
+                  <input
+                    class="booking__field-input"
+                    type="number"
+                    id="field-number"
+                    name="field-number"
+                    placeholder="Телефон"
+                    required
+                  />
+                  <input
+                    class="booking__field-input"
+                    type="email"
+                    id="field-email"
+                    name="field-email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+
+                <div class="booking__box-checkbox">
+                  <input
+                    class="booking__field-checkbox"
+                    type="checkbox"
+                    name="field-checkbox"
+                    id="field-checkbox"
+                    checked
+                  />
+                  <label class="booking__field-label" for="field-checkbox">
+                    Я согласен на обработку
+                    <span><br /></span>
+                    моих персональных данных
+                  </label>
+                </div>
+
+                <button class="booking__button button" type="submit">Оставить заявку</button>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Секция контакты -->
+
+      <section class="contacts page-main__contacts container">
+        <div class="contacts__block contacts__block--text">
+          <p class="contacts__text-title">
+            У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.
+          </p>
+          <p class="contacts__icon contacts__icon--location">
+            г. Санкт-Петербург,
+            <span><br /></span>
+            ул. Большая Конюшенная, 19/8
+          </p>
+          <p class="contacts__icon contacts__icon--phone">8-800-200-00-00</p>
+        </div>
+
+        <div class="contacts__block contacts__block--map">
+          <iframe
+            class="contacts__map-frame"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d889.5606135529787!2d30.32295089168755!3d59.9386653454175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1641980281199!5m2!1sru!2sru"
+            width="290"
+            height="316"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-box container">
+          <div class="footer__box-link-text">
+            <a
+              class="footer__link-text footer__link-text--icon"
+              aria-current="page"
+              title="Вы сейчас находитесь на главной странице"
+            >
+              <svg class="footer__link-icon-svg footer__link-icon-svg--logo" width="42" height="22">
+                <use xlink:href="img/sprite/sprite.svg#logo"></use>
+              </svg>
+              <span class="visually-hidden">Переход на главную страницу</span>
+            </a>
+            <a class="footer__link-text" href="#">Преимущества</a>
+            <a class="footer__link-text" href="#">Направления</a>
+            <a class="footer__link-text" href="#">Ближайшие круизы</a>
+            <a class="footer__link-text" href="#">Контакты</a>
+          </div>
+
+          <div class="footer__box-link-icon">
+            <a class="footer__link-icon" href="#">
+              <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
+                <use xlink:href="img/sprite/sprite.svg#ok"></use>
+              </svg>
+              <span class="visually-hidden">OK</span>
+            </a>
+
+            <a class="footer__link-icon" href="#">
+              <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
+                <use xlink:href="img/sprite/sprite.svg#ring"></use>
+              </svg>
+              <span class="visually-hidden">RING</span>
+            </a>
+
+            <a class="footer__link-icon" href="#">
+              <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
+                <use xlink:href="img/sprite/sprite.svg#kinder"></use>
+              </svg>
+              <span class="visually-hidden">KINDER</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="js/burger-menu.js"></script>
+  </body>
+</html>
