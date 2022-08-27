@@ -8,8 +8,7 @@ if (MAP) {
   MAP.classList.add("contacts__map-frame--js")
 }
 
-if (NAVTOGGLE) {
-
+if (NAVTOGGLE && PAGEHEADER && NAVLIST) {
   if (NAVLOGO) {
     NAVLOGO.classList.remove("main-nav__logo-link--mod")
   }
