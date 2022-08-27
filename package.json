@@ -16,13 +16,13 @@
     "gulp-terser": "^2.1.0",
     "postcss": "8.3.11",
     "postcss-csso": "^6.0.0",
-    "postcss-scss": "^4.0.4",
+    "postcss-less": "^6.0.0",
     "stylelint": "14.0.0",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "stylelint-config-htmlacademy": "^0.1.11"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "stylelint": "stylelint \"source/less/**/*.less\" --custom-syntax postcss-less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "gulp"
