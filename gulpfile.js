@@ -6,8 +6,6 @@ import autoprefixer from "autoprefixer"
 import browser from "browser-sync"
 import csso from "postcss-csso" //Уменьшение кода css
 import rename from "gulp-rename" //Переименование в .мин
-import htmlmin from "gulp-htmlmin" //Уменьшение кода html
-import terser from "gulp-terser" //Уменьшение кода js
 import squoosh from "gulp-libsquoosh" //Уменьшение картинок + WEBP
 import svgo from "gulp-svgmin" //Уменьшение SVG
 import svgstore from "gulp-svgstore" //SVG Спрайты
@@ -122,12 +120,13 @@ export const build = gulp.series(
   optimizeImages,
   createWebp,
 
-  gulp.parallel(copy, styles, html, scripts, svg, sprite)
+  gulp.parallel(copy, styles, html, scripts, svg, sprite),
+  
+  server
 )
 
 export default gulp.series(
   clean,
-  // optimizeImages,
   copyImages,
   createWebp,
 

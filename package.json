@@ -16,7 +16,8 @@
     "gulp-terser": "^2.1.0",
     "postcss": "8.3.11",
     "postcss-csso": "^6.0.0",
-    "stylelint": "13.13.1",
+    "postcss-scss": "^4.0.4",
+    "stylelint": "14.0.0",
     "stylelint-config-htmlacademy": "0.1.11"
   },
   "scripts": {
