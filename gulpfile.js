@@ -121,7 +121,7 @@ export const build = gulp.series(
   createWebp,
 
   gulp.parallel(copy, styles, html, scripts, svg, sprite),
-  
+
   server
 )
 

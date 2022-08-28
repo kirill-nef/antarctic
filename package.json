@@ -48,6 +48,8 @@
   "type": "module",
   "dependencies": {
     "del": "^6.0.0",
+    "editorconfig": "^0.15.3",
+    "editorconfig-checker": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-svgmin": "^4.1.0"
   }
