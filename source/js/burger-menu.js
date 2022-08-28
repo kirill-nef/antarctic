@@ -4,6 +4,16 @@ const NAV_LOGO = document.querySelector(".main-nav__logo-link")
 const MAP = document.querySelector(".contacts__map-frame")
 const PAGE_HEADER = document.querySelector(".page_header")
 
+const toggle_on_click = () => {
+  NAV_TOGGLE.classList.toggle("main-nav__toggle--closed-js")
+  NAV_TOGGLE.classList.toggle("main-nav__toggle--open-js")
+  NAV_LIST.classList.toggle("main-nav__list--closed-js")
+
+  if (NAV_LOGO) {
+    NAV_LOGO.classList.toggle("main-nav__logo-link--mod")
+  }
+}
+
 if (MAP) {
   MAP.classList.add("contacts__map-frame--js")
 }
@@ -17,13 +27,7 @@ if (NAV_TOGGLE && PAGE_HEADER && NAV_LIST) {
   NAV_TOGGLE.classList.add("main-nav__toggle--closed-js")
   NAV_TOGGLE.classList.remove("main-nav__toggle--open-js")
 
-  NAV_TOGGLE.addEventListener("click", () => {
-    NAV_TOGGLE.classList.toggle("main-nav__toggle--closed-js")
-    NAV_TOGGLE.classList.toggle("main-nav__toggle--open-js")
-    NAV_LIST.classList.toggle("main-nav__list--closed-js")
-
-    if (NAV_LOGO) {
-      NAV_LOGO.classList.toggle("main-nav__logo-link--mod")
-    }
-  })
+  NAV_TOGGLE.addEventListener("click", toggle_on_click)
 }
+
+
