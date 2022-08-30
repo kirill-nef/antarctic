@@ -143,18 +143,6 @@
   }
 }
 
-.booking__field-checkbox {
-  width: 20px;
-  height: 20px;
-  margin: 0 2px 0 0;
-
-  cursor: pointer;
-
-  @media (min-width: @tablet-width) {
-    width: 18px;
-    height: 18px;
-  }
-}
 
 .booking__field-label {
   padding: 10px 5px;
@@ -213,4 +201,36 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.booking__field-checkbox {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 2px 0 0;
+
+  cursor: pointer;
+
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.booking__clickbox-input[type="checkbox"]:checked + .booking__field-checkbox::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 18px;
+  height: 18px;
+
+  background-image: url("../img/icon-svg/checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
 }

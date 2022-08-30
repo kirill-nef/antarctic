@@ -782,14 +782,15 @@
                   <label class="visually-hidden" for="field-email">Введите e-mail</label>
                 </div>
 
-                <div class="booking__box-checkbox">
-                  <input class="booking__field-checkbox" type="checkbox" name="field-checkbox" id="field-checkbox" />
-                  <label class="booking__field-label" for="field-checkbox">
+                <label class="booking__box-checkbox">
+                  <input class="visually-hidden booking__clickbox-input" type="checkbox" name="field-checkbox" id="field-checkbox" />
+                  <span class="booking__field-checkbox"></span>
+                  <span class="booking__field-label" for="field-checkbox">
                     Я согласен на обработку
                     <span><br /></span>
                     моих персональных данных
-                  </label>
-                </div>
+                  </span>
+                </label>
 
                 <button class="booking__button button" type="submit">Оставить заявку</button>
               </fieldset>
