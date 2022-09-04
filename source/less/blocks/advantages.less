@@ -3,34 +3,68 @@
   padding-bottom: 67px;
 
   background-color: #e3ecf6;
-  background-image: url("/img/background-img/background_advantages_mobile@1x.jpg");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("/img/background-img/background_advantages_mobile@2x.jpg");
-  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     padding-top: 91px;
     padding-bottom: 100px;
-
-    background-image: url("/img/background-img/background_advantages_tablet@1x.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("/img/background-img/background_advantages_tablet@2x.jpg");
-    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 110px;
     padding-bottom: 117px;
+  }
+}
 
-    background-image: url("/img/background-img/background_advantages_desktop@1x.jpg");
+// Фоны для JPG
+.no-webp .advantages,
+.advantages {
+  background-image: url("../img/background-img-webp/background_advantages_mobile@1x.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-img-webp/background_advantages_mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background-img-webp/background_advantages_tablet@1x.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("/img/background-img/background_advantages_desktop@2x.jpg");
+      background-image: url("../img/background-img-webp/background_advantages_tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background-img-webp/background_advantages_desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-img-webp/background_advantages_desktop@2x.jpg");
+    }
+  }
+}
+
+// Фоны для WEBP
+.webp .advantages {
+  background-image: url("../img/background-img-webp/background_advantages_mobile@1x.webp");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-img-webp/background_advantages_mobile@2x.webp");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/background-img-webp/background_advantages_tablet@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-img-webp/background_advantages_tablet@2x.webp");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/background-img-webp/background_advantages_desktop@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background-img-webp/background_advantages_desktop@2x.webp");
     }
   }
 }
@@ -148,7 +182,7 @@
     gap: 30px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width-big) {
     grid-template-columns: minmax(360px, auto) minmax(360px, auto) minmax(360px, auto);
     gap: 43px;
   }

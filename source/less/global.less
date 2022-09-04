@@ -17,6 +17,12 @@ body {
   color: #000000;
 }
 
+.body-overflow {
+  @media (max-width: @mobile-width-only) {
+    overflow: hidden;
+  }
+}
+
 .container {
   .padding();
   .config-size-and-position();

@@ -8,6 +8,7 @@
     <title>Атлантис: главная страница</title>
     <!-- Предзагрузки -->
     <link rel="preload" href="js/burger-menu.js" as="script" />
+    <link rel="preload" href="js/modernizr-custom.js" as="script" />
     <link rel="preload" href="css/style.min.css" as="style" />
     <!-- Иконки -->
     <link rel="icon" href="favicon.ico" />
@@ -37,30 +38,31 @@
         <!-- Список в навигации -->
         <ul class="main-nav__list">
           <li class="main-nav__list-item">
-            <a class="main-nav__list-link" href="#">Преимущества</a>
+            <a class="main-nav__list-link" href="#advantages">Преимущества</a>
           </li>
           <li class="main-nav__list-item">
             <a class="main-nav__list-link" href="#">Направления</a>
           </li>
           <li class="main-nav__list-item">
-            <a class="main-nav__list-link" href="#">Ближайшие круизы</a>
+            <a class="main-nav__list-link" href="#cruise">Ближайшие круизы</a>
           </li>
           <li class="main-nav__list-item">
-            <a class="main-nav__list-link" href="#">Контакты</a>
+            <a class="main-nav__list-link" href="#contacts">Контакты</a>
           </li>
         </ul>
+
+        <!-- Кнопка бургер меню (М)-->
+        <button class="main-nav__toggle main-nav__toggle--open-js" type="button">
+          <span class="visually-hidden">Открыть/Закрыть меню</span>
+        </button>
       </nav>
-      <!-- Кнопка бургер меню (М)-->
-      <button class="main-nav__toggle main-nav__toggle--open-js" type="button">
-        <span class="visually-hidden">Открыть/Закрыть меню</span>
-      </button>
     </header>
 
     <!-- Блок основного контента  -->
     <main class="page-main">
       <!-- Секция заголовка страницы -->
       <div class="intro page-main__intro">
-        <div class="intro__box">
+        <div class="intro__box container">
           <h1 class="intro__title">
             Круизы
             <span><br /></span>
@@ -114,7 +116,7 @@
             <!-- jpg -->
             <!-- DESKTOP --- Standard [W=560px, H=301px] / Retina [W=1120px, H=602px] -->
             <source
-              media="(min-width: 1366px)"
+              media="(min-width: 1024px)"
               srcset="img/other-img-webp/pingvin_desktop@1x.jpg 1x, img/other-img/pingvin_desktop@2x.jpg 2x"
             />
 
@@ -138,7 +140,7 @@
       </aside>
 
       <!-- Блок преимуществ -->
-      <section class="advantages page-main__advantages">
+      <section class="advantages page-main__advantages" id="advantages">
         <div class="container">
           <h2 class="advantages__title-head">Преимущества</h2>
           <ul class="advantages__list">
@@ -180,18 +182,18 @@
       </section>
 
       <!-- Блок ближайшие круизы -->
-      <section class="cruise page-main__cruise container">
+      <section class="cruise page-main__cruise container" id="cruise">
         <h2 class="cruise__title">Ближайшие круизы</h2>
         <ul class="cruise__list">
           <!-- Круиз “Астория” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="
                     img/cruise-img-webp/astoriya_desktop@1x.webp 1x,
                     img/cruise-img-webp/astoriya_desktop@2x.webp 2x
@@ -220,7 +222,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="
                     img/cruise-img-webp/astoriya_desktop@1x.jpg 1x,
                     img/cruise-img-webp/astoriya_desktop@2x.jpg 2x
@@ -241,6 +243,7 @@
                   alt="Астория"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Астория”</h4>
@@ -248,63 +251,64 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Астория”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Ушуайя</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">11 дней</span>
               <p class="cruise__text-first">Цена</p>
-              <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <span class="cruise__text-second">от 11500 $</span>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Элайн” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
-                  srcset="img/cruise-img-webp/elayn_desktop@1x.webp 1x, img/cruise-img-webp/elayn_desktop@2x.webp 2x"
+                  media="(min-width: 1024px)"
+                  srcset="img/cruise-img-webp/odissey_desktop@1x.webp 1x, img/cruise-img-webp/odissey_desktop@2x.webp 2x"
                 />
 
                 <!-- TABLET --- Standard [W=309px, H=386px] / Retina [W=618px, H=772px] -->
                 <source
                   type="image/webp"
                   media="(min-width: 768px)"
-                  srcset="img/cruise-img-webp/elayn_tablet@1x.webp 1x, img/cruise-img-webp/elayn_tablet@2x.webp 2x"
+                  srcset="img/cruise-img-webp/odissey_tablet@1x.webp 1x, img/cruise-img-webp/odissey_tablet@2x.webp 2x"
                 />
 
                 <!-- MOBILE --- Standard [W=270px, H=386px] / Retina [W=540px, H=772px] -->
                 <source
                   type="image/webp"
-                  srcset="img/cruise-img-webp/elayn_mobile@1x.webp 1x, img/cruise-img-webp/elayn_mobile@2x.webp 2x"
+                  srcset="img/cruise-img-webp/odissey_mobile@1x.webp 1x, img/cruise-img-webp/odissey_mobile@2x.webp 2x"
                 />
 
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
-                  srcset="img/cruise-img-webp/elayn_desktop@1x.jpg 1x, img/cruise-img-webp/elayn_desktop@2x.jpg 2x"
+                  media="(min-width: 1024px)"
+                  srcset="img/cruise-img-webp/odissey_desktop@1x.jpg 1x, img/cruise-img-webp/odissey_desktop@2x.jpg 2x"
                 />
 
                 <!-- TABLET --- Standard [W=309px, H=386px] / Retina [W=618px, H=772px] -->
                 <source
                   media="(min-width: 768px)"
-                  srcset="img/cruise-img-webp/elayn_tablet@1x.jpg 1x, img/cruise-img-webp/elayn_tablet@2x.jpg 2x"
+                  srcset="img/cruise-img-webp/odissey_tablet@1x.jpg 1x, img/cruise-img-webp/odissey_tablet@2x.jpg 2x"
                 />
 
                 <!-- MOBILE --- Standard [W=270px, H=386px] / Retina [W=540px, H=772px] -->
                 <img
                   class="cruise__img"
-                  src="img/cruise-img-webp/elayn_mobile@1x.jpg"
-                  srcset="img/cruise-img-webp/elayn_mobile@2x.jpg 2x"
+                  src="img/cruise-img-webp/odissey_mobile@1x.jpg"
+                  srcset="img/cruise-img-webp/odissey_mobile@2x.jpg 2x"
                   alt="Элайн”"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Элайн”</h4>
@@ -319,19 +323,19 @@
               <span class="cruise__text-second">20 дней</span>
               <p class="cruise__text-first">Цена</p>
               <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Атлантис” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="
                     img/cruise-img-webp/atlantis_desktop@1x.webp 1x,
                     img/cruise-img-webp/atlantis_desktop@2x.webp 2x
@@ -360,7 +364,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="
                     img/cruise-img-webp/atlantis_desktop@1x.jpg 1x,
                     img/cruise-img-webp/atlantis_desktop@2x.jpg 2x
@@ -381,6 +385,7 @@
                   alt="Атлантис"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Атлантис”</h4>
@@ -388,26 +393,26 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Атлантис”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Ушуайя</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">15 дней</span>
               <p class="cruise__text-first">Цена</p>
               <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Одиссей” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="
                     img/cruise-img-webp/odissey_desktop@1x.webp 1x,
                     img/cruise-img-webp/odissey_desktop@2x.webp 2x
@@ -430,7 +435,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/odissey_desktop@1x.jpg 1x, img/cruise-img-webp/odissey_desktop@2x.jpg 2x"
                 />
 
@@ -448,6 +453,7 @@
                   alt="Одиссей"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Одиссей”</h4>
@@ -455,26 +461,26 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Одиссей”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Чили - Антарктида</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Пунта-Аренас</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">13 дней</span>
               <p class="cruise__text-first">Цена</p>
-              <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <span class="cruise__text-second">от 9700 $</span>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Олимпия” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="
                     img/cruise-img-webp/olimpia_desktop@1x.webp 1x,
                     img/cruise-img-webp/olimpia_desktop@2x.webp 2x
@@ -497,7 +503,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/olimpia_desktop@1x.jpg 1x, img/cruise-img-webp/olimpia_desktop@2x.jpg 2x"
                 />
 
@@ -515,6 +521,7 @@
                   alt="Олимпия"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Олимпия”</h4>
@@ -522,26 +529,26 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Олимпия”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Аргентина - Фолклендские острова - Южная Георгия - Антарктида</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Ушуайя</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">21 день</span>
               <p class="cruise__text-first">Цена</p>
-              <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <span class="cruise__text-second">от 18600 $</span>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Аврора” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/avrora_desktop@1x.webp 1x, img/cruise-img-webp/avrora_desktop@2x.webp 2x"
                 />
 
@@ -561,7 +568,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/avrora_desktop@1x.jpg 1x, img/cruise-img-webp/avrora_desktop@2x.jpg 2x"
                 />
 
@@ -579,6 +586,7 @@
                   alt="Аврора"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Аврора”</h4>
@@ -586,26 +594,26 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Аврора”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Аргентина - Антарктида - Чили</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Ушуайя</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">14 дней</span>
               <p class="cruise__text-first">Цена</p>
-              <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <span class="cruise__text-second">от 11700 $</span>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Ленор” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/lenor_desktop@1x.webp 1x, img/cruise-img-webp/lenor_desktop@2x.webp 2x"
                 />
 
@@ -625,7 +633,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/lenor_desktop@1x.jpg 1x, img/cruise-img-webp/lenor_desktop@2x.jpg 2x"
                 />
 
@@ -643,6 +651,7 @@
                   alt="Ленор"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Ленор”</h4>
@@ -650,26 +659,26 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Ленор”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Чили - Южная Георгия - Антарктида - Аргентина</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Пунта-Аренас</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">17 дней</span>
               <p class="cruise__text-first">Цена</p>
-              <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <span class="cruise__text-second">от 12500 $</span>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
 
           <!-- Круиз “Минион - 1” -->
-          <li class="cruise__item">
+          <li class="cruise__item" tabindex="0">
             <div class="cruise__block-img">
               <picture>
                 <!-- webp -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
                   type="image/webp"
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/minion_desktop@1x.webp 1x, img/cruise-img-webp/minion_desktop@2x.webp 2x"
                 />
 
@@ -689,7 +698,7 @@
                 <!-- jpg -->
                 <!-- DESKTOP --- Standard [W=260px, H=386px] / Retina [W=520px, H=772px] -->
                 <source
-                  media="(min-width: 1366px)"
+                  media="(min-width: 1024px)"
                   srcset="img/cruise-img-webp/minion_desktop@1x.jpg 1x, img/cruise-img-webp/minion_desktop@2x.jpg 2x"
                 />
 
@@ -707,6 +716,7 @@
                   alt="Минион"
                   width="270"
                   height="386"
+                  loading="lazy"
                 />
               </picture>
               <h4 class="cruise__title-item">Круиз “Минион - 1”</h4>
@@ -714,17 +724,18 @@
             <div class="cruise__card">
               <span class="cruise__title-list">Круиз “Минион - 1”</span>
               <p class="cruise__text-first">Маршрут</p>
-              <span class="cruise__text-second">Аргентина - Фолклендские острова - Антарктида - Чили</span>
+              <span class="cruise__text-second">Аргентина - Антарктида</span>
               <p class="cruise__text-first">Порт отправления</p>
-              <span class="cruise__text-second">Буэнос-Айрес</span>
+              <span class="cruise__text-second">Ушуайя</span>
               <p class="cruise__text-first">Продолжительность</p>
-              <span class="cruise__text-second">20 дней</span>
+              <span class="cruise__text-second">11 дней</span>
               <p class="cruise__text-first">Цена</p>
-              <span class="cruise__text-second">от 14500 $</span>
-              <button class="cruise__button button">Забронировать</button>
+              <span class="cruise__text-second">от 12300 $</span>
+              <a class="cruise__button button" href="#">Забронировать</a>
             </div>
           </li>
         </ul>
+
       </section>
 
       <section class="booking page-main__booking">
@@ -751,6 +762,7 @@
                   в ближайшее время
                 </h2>
                 <div class="booking__box-input">
+                  <label class="visually-hidden" for="field-name">Введите ваше имя</label>
                   <input
                     class="booking__field-input"
                     type="text"
@@ -759,18 +771,20 @@
                     placeholder="Имя"
                     required
                   />
-                  <label class="visually-hidden" for="field-name">Введите ваше имя</label>
 
+                  <label class="visually-hidden" for="field-number">Введите номер телефона</label>
                   <input
                     class="booking__field-input"
-                    type="tel"
+                    type="number"
+                    min="999"
+                    max="999999999999"
                     id="field-number"
                     name="field-number"
                     placeholder="Телефон"
                     required
                   />
-                  <label class="visually-hidden" for="field-number">Введите номер телефона</label>
 
+                  <label class="visually-hidden" for="field-email">Введите e-mail</label>
                   <input
                     class="booking__field-input"
                     type="email"
@@ -779,11 +793,16 @@
                     placeholder="Email"
                     required
                   />
-                  <label class="visually-hidden" for="field-email">Введите e-mail</label>
                 </div>
 
                 <label class="booking__box-checkbox">
-                  <input class="visually-hidden booking__clickbox-input" type="checkbox" name="field-checkbox" id="field-checkbox" />
+                  <input
+                    class="visually-hidden booking__clickbox-input"
+                    type="checkbox"
+                    name="field-checkbox"
+                    id="field-checkbox"
+                    required
+                  />
                   <span class="booking__field-checkbox"></span>
                   <span class="booking__field-label" for="field-checkbox">
                     Я согласен на обработку
@@ -801,7 +820,7 @@
 
       <!-- Секция контакты -->
 
-      <section class="contacts page-main__contacts container">
+      <section class="contacts page-main__contacts container" id="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__block contacts__block--text">
           <p class="contacts__text-title">
@@ -812,7 +831,7 @@
             <span><br /></span>
             ул. Большая Конюшенная, 19/8
           </p>
-          <p class="contacts__icon contacts__icon--phone">8-800-200-00-00</p>
+          <a class="contacts__icon contacts__icon--phone" href="tel:88002000000">8-800-200-00-00</a>
         </div>
 
         <div class="contacts__block contacts__block--map">
@@ -827,51 +846,54 @@
           ></iframe>
         </div>
       </section>
-
-      <footer class="footer">
-        <div class="footer-box container">
-          <div class="footer__box-link-text">
-            <a
-              class="footer__link-text footer__link-text--icon"
-              aria-current="page"
-              title="Вы сейчас находитесь на главной странице"
-            >
-              <svg class="footer__link-icon-svg footer__link-icon-svg--logo" width="42" height="22">
-                <use xlink:href="img/sprite/sprite.svg#logo"></use>
-              </svg>
-              <span class="visually-hidden">Переход на главную страницу</span>
-            </a>
-            <a class="footer__link-text" href="#">Преимущества</a>
-            <a class="footer__link-text" href="#">Направления</a>
-            <a class="footer__link-text" href="#">Ближайшие круизы</a>
-            <a class="footer__link-text" href="#">Контакты</a>
-          </div>
-
-          <div class="footer__box-link-icon">
-            <a class="footer__link-icon" href="#">
-              <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
-                <use xlink:href="img/sprite/sprite.svg#ok"></use>
-              </svg>
-              <span class="visually-hidden">OK</span>
-            </a>
-
-            <a class="footer__link-icon" href="#">
-              <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
-                <use xlink:href="img/sprite/sprite.svg#ring"></use>
-              </svg>
-              <span class="visually-hidden">RING</span>
-            </a>
-
-            <a class="footer__link-icon" href="#">
-              <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
-                <use xlink:href="img/sprite/sprite.svg#kinder"></use>
-              </svg>
-              <span class="visually-hidden">KINDER</span>
-            </a>
-          </div>
-        </div>
-      </footer>
     </main>
+
+    <footer class="footer">
+      <div class="footer-box container">
+        <div class="footer__box-link-text">
+          <a
+            class="footer__link-text footer__link-text--icon"
+            aria-current="page"
+            title="Вы сейчас находитесь на главной странице"
+          >
+            <svg class="footer__link-icon-svg footer__link-icon-svg--logo" width="42" height="22">
+              <use xlink:href="img/sprite/sprite.svg#logo"></use>
+            </svg>
+            <span class="visually-hidden">Переход на главную страницу</span>
+          </a>
+          <a class="footer__link-text" href="#">Преимущества</a>
+          <a class="footer__link-text" href="#">Направления</a>
+          <a class="footer__link-text" href="#">Ближайшие круизы</a>
+          <a class="footer__link-text" href="#">Контакты</a>
+        </div>
+
+        <div class="footer__box-link-icon">
+          <a class="footer__link-icon" href="#">
+            <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
+              <use xlink:href="img/sprite/sprite.svg#ok"></use>
+            </svg>
+            <span class="visually-hidden">OK</span>
+          </a>
+
+          <a class="footer__link-icon" href="#">
+            <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
+              <use xlink:href="img/sprite/sprite.svg#ring"></use>
+            </svg>
+            <span class="visually-hidden">RING</span>
+          </a>
+
+          <a class="footer__link-icon" href="#">
+            <svg class="footer__link-icon-svg footer__link-icon-svg--soc" width="16" height="16">
+              <use xlink:href="img/sprite/sprite.svg#kinder"></use>
+            </svg>
+            <span class="visually-hidden">KINDER</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/scroll.js"></script>
+    <script src="js/modernizr-custom.js"></script>
     <script src="js/burger-menu.js"></script>
   </body>
 </html>

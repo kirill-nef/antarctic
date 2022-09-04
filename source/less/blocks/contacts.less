@@ -19,6 +19,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__block {
@@ -37,7 +41,7 @@
       margin-bottom: 0;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @desktop-width-big) {
       padding-left: 100px;
     }
   }
@@ -74,6 +78,10 @@
     background-image: url("/img/map-img/map-desktop@1x.jpg");
 
     min-height: 316px;
+    min-width: 460px;
+  }
+
+  @media (min-width: @desktop-width-big) {
     min-width: 560px;
   }
 }
@@ -96,6 +104,12 @@
     }
   }
 
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &::before {
     position: absolute;
     top: 2px;
@@ -111,6 +125,11 @@
 
   &--location::before {
     background-image: url("../img/icon-svg/location.svg");
+  }
+
+  &--phone {
+    text-decoration: none;
+    color: #000000;
   }
 
   &--phone::before {

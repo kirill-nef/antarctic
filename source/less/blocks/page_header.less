@@ -9,3 +9,16 @@
 .page_header--js {
   position: absolute;
 }
+
+.page_header--js-menu {
+  @media (max-width: @mobile-width-only) {
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
