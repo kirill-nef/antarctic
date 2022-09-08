@@ -64,14 +64,6 @@
     margin: 0;
   }
 
-  &:hover {
-    overflow-y: scroll;
-  }
-
-  &:focus-within {
-    overflow-y: scroll;
-  }
-
   &:focus {
     outline: 3px solid #011c40;
     border-radius: 6px;
@@ -92,7 +84,7 @@
 
   display: flex;
   flex-direction: column;
-  padding: 28px 25px 33px;
+  padding: 28px 25px 25px;
   box-sizing: border-box;
   min-height: inherit;
 
@@ -101,13 +93,20 @@
   transition: all 0.2s linear;
   opacity: 0;
 
+  scrollbar-width: none; /*mozilla*/
+
   @media (min-width: @tablet-width) {
-    padding: 28px 35px 35px;
+    padding: 28px 35px 25px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none; /*chrome*/
   }
 
   &:hover {
     opacity: 1;
     box-shadow: 12px 14px 5px -5px rgba(34, 60, 80, 0.6);
+    overflow-y: auto;
   }
 
   &:focus {
@@ -116,6 +115,7 @@
   }
 
   &:focus-within {
+    overflow-y: auto;
     opacity: 1;
     box-shadow: 12px 14px 5px -5px rgba(34, 60, 80, 0.6);
   }
