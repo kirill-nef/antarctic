@@ -17,6 +17,17 @@ const toggle_on_click = () => {
   }
 }
 
+const menu_on_click = (evt) => {
+  if (
+    !evt.target.closest(".main-nav__list") &&
+    !evt.target.closest(".main-nav__logo-link") &&
+    !evt.target.closest(".main-nav__toggle") &&
+    !NAV_LIST.classList.contains("main-nav__list--closed-js")
+  ) {
+    toggle_on_click()
+  }
+}
+
 const link_on_click = () => {
   NAV_LIST.addEventListener("click", (evt) => {
     if (evt.target.closest(".main-nav__list-link") && NAV_TOGGLE.classList.contains("main-nav__toggle--open-js")) {
@@ -40,6 +51,6 @@ if (NAV_TOGGLE && PAGE_HEADER && NAV_LIST && MAIN_NAV) {
   NAV_TOGGLE.classList.remove("main-nav__toggle--open-js")
 
   NAV_TOGGLE.addEventListener("click", toggle_on_click)
-
+  MAIN_NAV.addEventListener("click", menu_on_click)
   link_on_click()
 }

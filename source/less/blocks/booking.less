@@ -167,6 +167,18 @@
       margin-bottom: 4px;
     }
   }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 }
 
 .booking__button {
@@ -200,7 +212,6 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-around;
-    align-items: center;
   }
 }
 
@@ -220,6 +231,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     margin-bottom: 11px;
     margin-right: 23px;
   }
