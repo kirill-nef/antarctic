@@ -28,12 +28,18 @@
     justify-content: center;
 
     @media (min-width: @tablet-width) {
+      padding-top: 10px;
       justify-content: flex-start;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 0;
     }
   }
 
   &--text {
     @media (min-width: @desktop-width) {
+      padding-top: 10px;
       padding-right: 10px;
     }
   }

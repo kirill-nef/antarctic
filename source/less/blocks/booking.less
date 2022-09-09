@@ -148,6 +148,7 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    text-align: left;
     margin-bottom: 30px;
   }
 }
@@ -283,4 +284,8 @@
   background-position: center;
   background-repeat: no-repeat;
   content: "";
+}
+
+.booking__clickbox-input:focus ~ .booking__field-checkbox {
+  outline: auto #ee7f24;
 }
